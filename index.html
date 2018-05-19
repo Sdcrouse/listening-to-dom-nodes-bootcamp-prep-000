@@ -78,6 +78,15 @@
           divs[5].firstChild.nodeValue = "Catch a tiger by the toe!"; */
         } 
       } /* Later on, I'll figure out how to change values with the click of a mouse and back again... */
+      
+      function capture(e) {
+        console.log(this.firstChild.nodeValue.trim() + ' captured')
+      }
+ 
+      for (let i = 0; i < divs.length; i++) {
+        // set the third argument to `true`!
+        divs[i].addEventListener('click', capture, true);
+      }
     </script>
     
   </body>
