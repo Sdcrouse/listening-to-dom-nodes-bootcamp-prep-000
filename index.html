@@ -60,8 +60,10 @@
       }
       
       function noBubbling(e) {
-        
+        e.stopPropagation();
+        console.log(this.firstChild.nodeValue.trim() + 'was not bubbled');
       }
+      
       for (let i = 0; i < divs.length; i++) {
         if (i === 3) {
           divs[i].addEventListener('click',noBubbling);
