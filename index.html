@@ -46,6 +46,13 @@
       })
       
       const input = document.querySelector('input')
+      input.addEventListener('keydown', function(e) {
+        if (e.which === 71) { 
+          alert('No can do. I hate the letter G!');
+          return e.preventDefault();
+        }
+      })
+      
       
     </script>
     
